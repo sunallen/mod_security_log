@@ -1,0 +1,52 @@
+
+SecAction "phase:5,id:980145,pass,t:none,nolog,noauditlog,setvar:tx.executing_anomaly_score=%{tx.outbound_anomaly_score_pl1},setvar:tx.executing_anomaly_score=+%{tx.outbound_anomaly_score_pl2},setvar:tx.executing_anomaly_score=+%{tx.outbound_anomaly_score_pl3},setvar:tx.executing_anomaly_score=+%{tx.outbound_anomaly_score_pl4}"
+
+SecRule "TX:OUTBOUND_ANOMALY_SCORE" "@lt %{tx.outbound_anomaly_score_threshold}" "phase:5,id:980150,pass,t:none,log,noauditlog,msg:'Outbound Anomaly Score (Total Outbound Score: %{TX.OUTBOUND_ANOMALY_SCORE}): individual paranoia level scores: %{TX.OUTBOUND_ANOMALY_SCORE_PL1}, %{TX.OUTBOUND_ANOMALY_SCORE_PL2}, %{TX.OUTBOUND_ANOMALY_SCORE_PL3}, %{TX.OUTBOUND_ANOMALY_SCORE_PL4}',tag:event-correlation,chain"
+#SecRule "TX:MONITOR_ANOMALY_SCORE" "@gt 1"
+
+
+--0ecaf15b-Z--
+
+192.168.142.1 - - [05/Sep/2019:23:34:15 +0800] "GET /wp-login.php?redirect_to=http%3A%2F%2F192.168.142.20%2Fwp-admin%2F&reauth=1 HTTP/1.1" 403 214 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"
+--1fec6924-A--
+[05/Sep/2019:23:36:08 +0800] XXEraKd2w8XtQZjGgqmfYwAAAAE 192.168.142.1 49934 192.168.142.20 80
+--1fec6924-B--
+GET /wp-admn HTTP/1.1
+Host: 192.168.142.20
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7
+
+--1fec6924-F--
+HTTP/1.1 404 Not Found
+Content-Length: 205
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=iso-8859-1
+
+--1fec6924-E--
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /wp-admn was not found on this server.</p>
+</body></html>
+
+--1fec6924-H--
+Message: Warning. Pattern match "^[\\d.:]+$" at REQUEST_HEADERS:Host. [file "/etc/httpd/modsecurity.d/activated_rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "682"] [id "920350"] [msg "Host header is a numeric IP address"] [data "192.168.142.20"] [severity "WARNING"] [ver "OWASP_CRS/3.1.0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "OWASP_CRS/PROTOCOL_VIOLATION/IP_HOST"] [tag "WASCTC/WASC-21"] [tag "OWASP_TOP_10/A7"] [tag "PCI/6.5.10"]
+Apache-Error: [file "apache2_util.c"] [line 271] [level 3] [client 192.168.142.1] ModSecurity: Warning. Pattern match "^[\\\\\\\\d.:]+$" at REQUEST_HEADERS:Host. [file "/etc/httpd/modsecurity.d/activated_rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "682"] [id "920350"] [msg "Host header is a numeric IP address"] [data "192.168.142.20"] [severity "WARNING"] [ver "OWASP_CRS/3.1.0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "OWASP_CRS/PROTOCOL_VIOLATION/IP_HOST"] [tag "WASCTC/WASC-21"] [tag "OWASP_TOP_10/A7"] [tag "PCI/6.5.10"] [hostname "192.168.142.20"] [uri "/wp-admn"] [unique_id "XXEraKd2w8XtQZjGgqmfYwAAAAE"]
+Stopwatch: 1567697768319523 6928 (- - -)
+Stopwatch2: 1567697768319523 6928; combined=4531, p1=1897, p2=1872, p3=82, p4=358, p5=322, sr=710, sw=0, l=0, gc=0
+Response-Body-Transformed: Dechunked
+Producer: ModSecurity for Apache/2.9.2 (http://www.modsecurity.org/); OWASP_CRS/3.1.0.
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+Engine-Mode: "ENABLED"
+
+--1fec6924-Z--
+
+192.168.142.1 - - [05/Sep/2019:23:36:08 +0800] "GET /wp-admn HTTP/1.1" 404 205 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36"
