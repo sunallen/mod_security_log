@@ -1,0 +1,118 @@
+
+--2f44682f-H--
+Stopwatch: 1567740846680135 1135 (- - -)
+Stopwatch2: 1567740846680135 1135; combined=105, p1=0, p2=0, p3=0, p4=0, p5=105, sr=0, sw=0, l=0, gc=0
+Producer: ModSecurity for Apache/2.9.2 (http://www.modsecurity.org/); OWASP_CRS/3.1.0.
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+
+--2f44682f-Z--
+
+::1 - - [06/Sep/2019:11:34:06 +0800] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips \xe9\xa1\x98\xe6\x99\x82\xe5\x85\x89\xe5\x8c\x86\xe5\x8c\x86\xe6\xb5\x81\xe5\x8e\xbb... mod_fcgid/2.3.9 (internal dummy connection)"
+192.168.142.70 - - [06/Sep/2019:11:35:39 +0800] "GET / HTTP/1.1" 200 32922 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:40 +0800] "GET / HTTP/1.1" 200 32922 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:41 +0800] "HEAD / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:44 +0800] "HEAD /robots.txt HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:44 +0800] "HEAD /fantastico_fileslist.txt HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:44 +0800] "HEAD /searchreplacedb2.php HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:44 +0800] "POST /xmlrpc.php HTTP/1.1" 200 419 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:47 +0800] "HEAD /readme.html HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:47 +0800] "HEAD /olvasdel.html HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:47 +0800] "HEAD /lisenssi.html HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:47 +0800] "HEAD /liesmich.html HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:47 +0800] "HEAD /wp-content/debug.log HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+--88607762-A--
+[06/Sep/2019:11:35:47 +0800] XXHUE3TjiI4XLWLIG21unQAAAAA 192.168.142.70 56128 192.168.142.20 80
+--88607762-B--
+GET /wp-includes/rss-functions.php HTTP/1.1
+Host: 192.168.142.20
+Accept: */*
+Accept-Encoding: gzip, deflate
+Cookie: wordpress_test_cookie=WP+Cookie+check; tk_ai=jetpack%3AtbEQIse%2F11iM%2BgWi8mn1WRPU
+User-Agent: Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3
+
+--88607762-F--
+HTTP/1.0 500 Internal Server Error
+Content-Length: 0
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+--88607762-H--
+Apache-Error: [file "/builddir/build/BUILD/php-7.2.20/sapi/apache2handler/sapi_apache2.c"] [line 351] [level 3] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /var/www/html/wp-includes/rss-functions.php:8\\nStack trace:\\n#0 {main}\\n  thrown in /var/www/html/wp-includes/rss-functions.php on line 8
+Apache-Handler: application/x-httpd-php
+Stopwatch: 1567740947579302 3729 (- - -)
+Stopwatch2: 1567740947579302 3729; combined=28, p1=0, p2=0, p3=0, p4=0, p5=27, sr=0, sw=1, l=0, gc=0
+Producer: ModSecurity for Apache/2.9.2 (http://www.modsecurity.org/); OWASP_CRS/3.1.0.
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+
+--88607762-Z--
+
+192.168.142.70 - - [06/Sep/2019:11:35:47 +0800] "GET /wp-includes/rss-functions.php HTTP/1.1" 500 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:47 +0800] "HEAD /wp-content/backup-db/ HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:47 +0800] "HEAD /installer-log.txt HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:47 +0800] "GET /wp-signup.php HTTP/1.1" 302 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:49 +0800] "GET /wp-content/mu-plugins/ HTTP/1.1" 404 220 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:49 +0800] "GET /wp-login.php?action=register HTTP/1.1" 302 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:50 +0800] "GET /wp-login.php?registration=disabled HTTP/1.1" 200 3287 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:51 +0800] "GET /wp-content/uploads/ HTTP/1.1" 200 1542 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:51 +0800] "HEAD /wp-content/uploads/tmm_db_migrate/tmm_db_migrate.zip HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:51 +0800] "HEAD /wp-content/uploads/dump.sql HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:51 +0800] "HEAD /emergency.php HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:51 +0800] "GET /wp-cron.php HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:52 +0800] "GET /?feed=rss2 HTTP/1.1" 200 26097 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:54 +0800] "GET /?feed=comments-rss2 HTTP/1.1" 200 6977 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:56 +0800] "GET /wp-content/themes/fullby/style.css HTTP/1.1" 200 11046 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:57 +0800] "HEAD /wp-content/themes/fullby/readme.txt HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:57 +0800] "HEAD /wp-content/themes/fullby/README.txt HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+--88607762-A--
+[06/Sep/2019:11:35:57 +0800] XXHUHYBALpwV4rcMlXB9fQAAAAQ 192.168.142.70 56130 192.168.142.20 80
+--88607762-B--
+GET /wp-content/themes/fullby/ HTTP/1.1
+Host: 192.168.142.20
+Accept: */*
+Accept-Encoding: gzip, deflate
+Cookie: wordpress_test_cookie=WP+Cookie+check; tk_ai=jetpack%3AtbEQIse%2F11iM%2BgWi8mn1WRPU
+User-Agent: Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3
+
+--88607762-F--
+HTTP/1.0 500 Internal Server Error
+Content-Length: 0
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+--88607762-H--
+Apache-Error: [file "/builddir/build/BUILD/php-7.2.20/sapi/apache2handler/sapi_apache2.c"] [line 351] [level 3] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /var/www/html/wp-content/themes/fullby/index.php:1\\nStack trace:\\n#0 {main}\\n  thrown in /var/www/html/wp-content/themes/fullby/index.php on line 1
+Apache-Handler: application/x-httpd-php
+Stopwatch: 1567740957477471 1130 (- - -)
+Stopwatch2: 1567740957477471 1130; combined=8, p1=0, p2=0, p3=0, p4=0, p5=8, sr=0, sw=0, l=0, gc=0
+Producer: ModSecurity for Apache/2.9.2 (http://www.modsecurity.org/); OWASP_CRS/3.1.0.
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips
+
+--88607762-Z--
+
+192.168.142.70 - - [06/Sep/2019:11:35:57 +0800] "GET /wp-content/themes/fullby/ HTTP/1.1" 500 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:35:57 +0800] "HEAD /wp-content/themes/fullby/error_log HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "GET /wp-json/wp/v2/users/?per_page=100&page=1 HTTP/1.1" 404 218 "-" "Typhoeus - https://github.com/typhoeus/typhoeus"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "GET /wp-json/oembed/1.0/embed?url=http://192.168.142.20/&format=json HTTP/1.1" 404 222 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "GET /feed/ HTTP/1.1" 404 203 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "GET /comments/feed/ HTTP/1.1" 404 212 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "GET /feed/rss/ HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "GET /feed/rss2/ HTTP/1.1" 404 208 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "GET /author-sitemap.xml HTTP/1.1" 404 216 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "HEAD /?author=3 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "HEAD /?author=2 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "HEAD /?author=1 HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "HEAD /?author=4 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:00 +0800] "HEAD /?author=5 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:02 +0800] "GET /?author=1 HTTP/1.1" 200 33012 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:02 +0800] "HEAD /?author=6 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:02 +0800] "HEAD /?author=7 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:03 +0800] "GET / HTTP/1.1" 200 32922 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:04 +0800] "GET /9b3f1d93a36da135192c7d47865bdee4.html HTTP/1.1" 404 235 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:05 +0800] "HEAD /?author=8 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:05 +0800] "HEAD /?author=10 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:05 +0800] "HEAD /?author=9 HTTP/1.1" 404 - "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:07 +0800] "GET /wp-login.php HTTP/1.1" 200 3155 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+192.168.142.70 - - [06/Sep/2019:11:36:08 +0800] "POST /wp-login.php HTTP/1.1" 200 4150 "-" "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3"
+::1 - - [06/Sep/2019:11:36:13 +0800] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips \xe9\xa1\x98\xe6\x99\x82\xe5\x85\x89\xe5\x8c\x86\xe5\x8c\x86\xe6\xb5\x81\xe5\x8e\xbb... mod_fcgid/2.3.9 (internal dummy connection)"
+::1 - - [06/Sep/2019:11:36:14 +0800] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips \xe9\xa1\x98\xe6\x99\x82\xe5\x85\x89\xe5\x8c\x86\xe5\x8c\x86\xe6\xb5\x81\xe5\x8e\xbb... mod_fcgid/2.3.9 (internal dummy connection)"
+::1 - - [06/Sep/2019:11:36:16 +0800] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips \xe9\xa1\x98\xe6\x99\x82\xe5\x85\x89\xe5\x8c\x86\xe5\x8c\x86\xe6\xb5\x81\xe5\x8e\xbb... mod_fcgid/2.3.9 (internal dummy connection)"
